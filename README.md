@@ -1,7 +1,7 @@
 # ionicPhoneApp
 
 ## Setup and Start
-npm install -g ionic 
-npm install -g cordova 
-ionic start myApp 
+npm install -g ionic <br>
+npm install -g cordova <br>
+ionic start myApp <br>
 ionic emulate ios 
