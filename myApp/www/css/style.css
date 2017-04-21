@@ -1,0 +1,106 @@
+/* Empty. Add your own CSS if you like */
+.background-image {
+  background-image: url('../img/splash.png');
+  width: 100vw;
+  height: 100vh;
+
+ #filter: blur(5px);
+}
+
+.no-background{
+ background-color: #0a9dc7;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.logoText {
+  text-align: center;
+  font-size: 28px;
+  #font-family: fantasy;
+}
+.item-note {
+  font-size: 10px;
+  margin-top: -22px;
+  margin-right: -35px;
+}
+.textCenter {
+  text-align: center;
+}
+
+.policy{
+  text-align: left;
+  #padding:20px;
+  font-size: 10px;
+  color: #ef473a;
+}
+
+.account-signin{
+  text-align: center;
+  #padding:20px;
+  font-size: 15px;
+  color: #555555;
+}
+
+.signin-link{
+  text-align: center;
+  #padding:20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #222222;
+}
+
+#-----------------------
+
+.error-container {
+  margin: 5px 0;
+}
+
+.error-container:last-child {
+  margin: 5px 0 0;
+}
+
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+
+.error i {
+  font-size: 24px;
+  color: #B83E2C;
+  vertical-align: middle;
+}
+
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+
+.has-errors {
+  border-bottom: 3px solid #B83E2C;
+}
+
+.no-errors {
+  border-bottom: 3px solid green;
+}
+
+.grid{
+  height: 200px !important;
+  width: 200px !important;
+}
+
+.grid-container .list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+}

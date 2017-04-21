@@ -1,0 +1,63 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Register</h1>
+    <div class="buttons">
+      <button class="button" ng-click="closeRegister()"><i class="icon ion-ios-close"></i></button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="card">
+    <form name="registerFrm">
+      <div class="list">
+        <label class="item item-input item-floating-label"
+               ng-class="{ 'has-errors' : registerFrm.username.$invalid,
+                            'no-errors' : registerFrm.username.$valid}">
+          <span class="input-label">Username</span>
+          <input name="username" type="text" placeholder="Username" ng-model="user.username" required ng-minlength="5"
+                 ng-maxlength="20">
+        </label>
+        <div class="error-container" ng-show="registerFrm.username.$error" ng-messages="registerFrm.username.$error">
+          <div ng-messages-include="error-list.html"></div>
+        </div>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="user.password" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="Email" ng-model="user.email" required>
+        </label>
+
+        <!--label class="item item-input item-floating-label">
+          <span class="input-label">Phone</span>
+          <input type="text" placeholder="Phone" ng-model="user.phone">
+        </label -->
+
+        <label class="item">
+          <div class="policy">By clicking Create Account, I agree to the Terms of Service and Privacy Policy.</div>
+          <button class="button button-block button-positive" ng-click="doRegister()">Create Account</button>
+        </label>
+      </div>
+    </form>
+    <ion-item class="padding account-signin">
+      Already have an account? <br>
+      <button ng-click="login()" class="button signin-link">Sign in</button>
+    </ion-item>
+  </ion-content>
+
+</ion-modal-view>
+
+<script id="error-list.html" type="text/ng-template">
+  <div class="error" ng-message="required">
+    <i class="ion-information-circled"></i>
+    This field is required!
+  </div>
+  <div class="error" ng-message="minlength">
+    <i class="ion-information-circled"></i>
+    Minimum length of this field is 5 characters!
+  </div>
+  <div class="error" ng-message="maxlength">
+    <i class="ion-information-circled"></i>
+    Maximum length of this field is 20 characters!
+  </div>
+</script>

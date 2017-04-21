@@ -1,0 +1,34 @@
+<ion-view view-title="My Circle" onload="init()">
+  <ion-content padding-vertical="25px">
+
+    <ion-header-bar class="bar-positive">
+      <h1 class="title"></h1>
+      <div class="buttons">
+        <button class="button button-icon" ng-click="data.grid = !data.grid">
+          <i class="icon ion-grid" ng-if="!data.grid"></i>
+          <i class="icon ion-navicon" ng-if="data.grid"></i>
+        </button>
+      </div>
+    </ion-header-bar>
+      <ion-list ng-class="{'grid-container' : data.grid , '' : !data.grid}">
+        <ion-item collection-repeat="circle in circles"
+                  ng-class="{'grid col col-25' : data.grid , '' : !data.grid}"
+                  class="item-remove-animate">
+                  Name : {{circle.name}}
+                  <br>
+                  Circle Description :{{circle.description}}
+                  <div class="card">
+                    <div class="item item-divider">
+                      {{circle.name}}
+                    </div>
+                    <div class="item item-text-wrap">
+                      {{circle.description}}
+                    </div>
+                    <div>
+                      I'm a Footer in a Card!
+                    </div>
+                  </div>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>
